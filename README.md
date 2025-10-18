@@ -1,2 +1,42 @@
-# Birthdeath
-Pick your birth date from a simple dropdown menu
+<html>
+<body>
+
+<h1>Birthdeath</h1>
+
+<p>Select your birthday based on which famous person died that day</p>
+<p>If no famous person died on that date another historic event will be listed</p>
+
+
+<label for="cars">Choose a death:</label>
+	<select name="Date" id="date">
+		<option value="22/05/1990">Rocky Graziano, American boxer, dies at 71</option>
+		<option value="23/05/1990">Giuseppe Santomaso, Italian painter and educator, dies at 82</option>
+        <option value="24/05/1990">Arthur Villeneuve, Canadian painter, dies at 80</option>
+        <option value="25/05/1990">Victor "Vic" Tayback, American actor, dies at 60</option>
+		<option value="12/31/2010">Raymond Impanis, Belgian professional cyclist, dies at 85</option>
+		<option value="12/30/2010">Nikolay Abramov, Russian footballer, dies at 26</option>
+		<option value="12/29/2010">Gratien Ananda, Sri Lankan singer, composer, songwriter and lyricist, dies at 53</option>
+</select>
+
+<button onclick="getOption()">
+	Choose date
+</button>
+
+<b></b>
+    
+<script>
+	function getOption() {
+	selectElement = document.querySelector('#date');
+	output = selectElement.value;
+	document.querySelector('.output').textContent = output;
+	}
+</script>
+
+<p>
+	Your bithday is:
+	<span class="output"></span>
+</p>
+
+
+</body>
+</html>
